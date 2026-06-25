@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>The Hacker Who Saved the World From His Bedroom — Verba Mind</title>
+<meta name="description" content="He was twenty-two, unknown, and working alone. Then one quiet decision stopped a global attack — and forced him to face the person he used to be. The true story of Marcus Hutchins. A Verba Mind lesson in clear B1–B2 English with 6 gold words." />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="The Hacker Who Saved the World From His Bedroom" />
+<meta property="og:description" content="One quiet decision stopped a global attack — and forced him to face who he used to be. A true story about skill, second chances, and outgrowing your past." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+<style>
+  :root{
+    --ink:#14110d;
+    --ink-soft:#1c1813;
+    --panel:#221d16;
+    --line:rgba(216,178,90,0.16);
+    --cream:#f1e9d9;
+    --muted:#b6a98f;
+    --muted-dim:#8a7f6a;
+    --gold:#d8b25a;
+    --gold-soft:#e7cd8f;
+    --serif:"Fraunces",Georgia,"Times New Roman",serif;
+    --sans:"Inter",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    background:
+      radial-gradient(1200px 600px at 50% -10%, rgba(216,178,90,0.07), transparent 60%),
+      var(--ink);
+    color:var(--cream);
+    font-family:var(--sans);
+    font-size:18px;
+    line-height:1.75;
+    -webkit-font-smoothing:antialiased;
+  }
+  a{color:inherit;text-decoration:none;}
+
+  /* ---------- Nav ---------- */
+  .nav{
+    display:flex;align-items:center;justify-content:space-between;
+    max-width:1080px;margin:0 auto;padding:26px 28px;
+  }
+  .brand{font-family:var(--serif);font-size:22px;letter-spacing:0.3px;}
+  .brand em{font-style:italic;color:var(--gold);}
+  .nav-links{display:flex;gap:26px;font-size:14px;color:var(--muted);}
+  .nav-links a{transition:color .25s;}
+  .nav-links a:hover{color:var(--gold-soft);}
+  @media(max-width:620px){ .nav-links{display:none;} }
+
+  /* ---------- Article shell ---------- */
+  .wrap{max-width:720px;margin:0 auto;padding:0 28px 120px;}
+  .eyebrow{
+    font-size:12px;letter-spacing:2.4px;text-transform:uppercase;
+    color:var(--gold);margin:48px 0 22px;
+  }
+  h1{
+    font-family:var(--serif);font-weight:500;
+    font-size:clamp(34px,6vw,54px);line-height:1.08;
+    letter-spacing:-0.5px;margin:0 0 22px;
+  }
+  h1 em{font-style:italic;color:var(--gold-soft);}
+  .dek{
+    font-size:20px;color:var(--muted);line-height:1.6;
+    margin:0 0 34px;max-width:60ch;
+  }
+  .meta{
+    display:flex;flex-wrap:wrap;gap:26px;
+    padding:20px 0;margin-bottom:46px;
+    border-top:1px solid var(--line);border-bottom:1px solid var(--line);
+    font-size:13px;color:var(--muted-dim);
+  }
+  .meta b{color:var(--cream);font-weight:600;}
+
+  /* ---------- Body copy ---------- */
+  article p{margin:0 0 26px;}
+  article p.lead{font-size:21px;line-height:1.6;color:#f6efe1;}
+  .em-term{font-style:italic;color:var(--gold-soft);}
+
+  /* ---------- Pull quote ---------- */
+  .pull{
+    font-family:var(--serif);font-style:italic;font-weight:400;
+    font-size:clamp(24px,4.4vw,32px);line-height:1.35;
+    color:var(--gold-soft);
+    margin:48px 0;padding:8px 0 8px 28px;
+    border-left:2px solid var(--gold);
+  }
+
+  /* ---------- Gold words ---------- */
+  .gold{
+    color:var(--gold);font-weight:500;cursor:pointer;
+    border-bottom:1px dotted rgba(216,178,90,0.55);
+    transition:color .2s;
+  }
+  .gold:hover{color:var(--gold-soft);}
+  .def{
+    display:none;
+    margin:14px 0 30px;padding:16px 18px;
+    background:var(--panel);border:1px solid var(--line);border-radius:12px;
+    font-size:15.5px;line-height:1.6;color:var(--muted);
+  }
+  .def.open{display:block;animation:fade .4s ease;}
+  .def .w{color:var(--gold);font-weight:600;font-family:var(--serif);font-size:17px;}
+  .def .ex{display:block;margin-top:8px;color:var(--muted-dim);font-style:italic;}
+
+  /* ---------- Reveal animation ---------- */
+  .reveal{opacity:0;transform:translateY(22px);transition:opacity .7s ease,transform .7s ease;}
+  .reveal.in{opacity:1;transform:none;}
+  @keyframes fade{from{opacity:0;transform:translateY(6px);}to{opacity:1;transform:none;}}
+
+  /* ---------- Closing + footer ---------- */
+  .close-mark{
+    font-family:var(--serif);font-style:italic;font-size:22px;
+    color:var(--gold);text-align:center;margin:54px 0 10px;
+  }
+  .series-nav{
+    display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;
+    margin-top:60px;padding-top:28px;border-top:1px solid var(--line);
+    font-size:14px;color:var(--muted);
+  }
+  .series-nav a:hover{color:var(--gold-soft);}
+  footer{
+    max-width:720px;margin:0 auto;padding:40px 28px 60px;
+    border-top:1px solid var(--line);color:var(--muted-dim);font-size:13px;
+    text-align:center;
+  }
+  footer .fbrand{font-family:var(--serif);font-size:18px;color:var(--cream);margin-bottom:10px;}
+  footer a{color:var(--muted);} footer a:hover{color:var(--gold-soft);}
+
+  /* ---------- Word journal pill ---------- */
+  .journal{
+    position:fixed;right:18px;bottom:18px;z-index:50;
+    display:flex;align-items:center;gap:8px;
+    background:var(--ink-soft);border:1px solid var(--line);
+    color:var(--gold-soft);font-size:13px;font-weight:500;
+    padding:10px 14px;border-radius:999px;
+    box-shadow:0 10px 30px rgba(0,0,0,0.45);
+  }
+  .journal .star{color:var(--gold);}
+  .toast{
+    position:fixed;right:18px;bottom:64px;z-index:50;
+    background:var(--gold);color:#1a1409;font-weight:600;font-size:13px;
+    padding:9px 14px;border-radius:10px;opacity:0;transform:translateY(8px);
+    transition:opacity .3s,transform .3s;pointer-events:none;
+  }
+  .toast.show{opacity:1;transform:none;}
+</style>
+</head>
+<body>
+
+  <nav class="nav">
+    <a class="brand" href="https://verbamind1.netlify.app/">Verba <em>Mind</em></a>
+    <div class="nav-links">
+      <a href="https://verbamind1.netlify.app/#lessons">Lessons</a>
+      <a href="https://verbamind1.netlify.app/#article">This Week</a>
+      <a href="https://verbamind1.netlify.app/#about">About</a>
+      <a href="https://verbamind1.netlify.app/#subscribe">Subscribe</a>
+    </div>
+  </nav>
+
+  <div class="wrap">
+    <p class="eyebrow reveal">Minds &amp; Mysteries · True story · Part II</p>
+    <h1 class="reveal">The Hacker Who Saved the World <em>From His Bedroom</em></h1>
+    <p class="dek reveal">He was twenty-two, unknown, and working alone. Then one quiet decision stopped a global attack — and forced him to face the person he used to be. The true story of Marcus Hutchins.</p>
+    <div class="meta reveal">
+      <span>Reading time · <b>6 min</b></span>
+      <span>Level · <b>B1–B2</b></span>
+      <span>Vocabulary · <b>6 words</b></span>
+    </div>
+
+    <article>
+      <p class="lead reveal">In the spring of 2017, a small town in the south of England held a secret.</p>
+
+      <p class="reveal">In a quiet house in Devon, a twenty-two-year-old sat in his bedroom, surrounded by screens. His name was Marcus Hutchins. Online, almost nobody knew that name. They knew his <span class="gold" data-w="persona" data-d="The version of yourself that you show to others, especially online; a public identity." data-ex="Online he used the persona 'MalwareTech,' but few knew his real name.">persona</span> instead — “MalwareTech,” a young researcher who spent his nights taking dangerous software apart to understand how it worked.</p>
+      <div class="def" id="def-persona"></div>
+
+      <p class="reveal">He was not famous. He was not rich. He was simply curious, patient, and <span class="gold" data-w="vigilant" data-d="Always careful and watchful, ready to notice danger or small details others miss." data-ex="A vigilant nurse noticed the tiny change before anyone else did.">vigilant</span> — the kind of person who sees the small detail that everyone else walks past.</p>
+      <div class="def" id="def-vigilant"></div>
+
+      <p class="reveal">On the 12th of May, that habit saved the internet.</p>
+
+      <p class="reveal">That morning, a piece of <span class="em-term">ransomware</span> called WannaCry began to spread across the world. It locked people out of their own computers and demanded money to give them back. It did not stop at one country. Within hours it had reached hospitals, factories, and offices in more than 150 countries. In Britain, it crippled parts of the National Health Service. Doctors were turned away from their own screens. Surgeries were cancelled. The damage ran into hundreds of millions.</p>
+
+      <p class="reveal">Marcus did what he always did: he opened the code and started reading. And there, hidden inside the attack, he noticed something strange — a long, meaningless web address that nobody owned. On a quiet instinct, he registered it. It cost him about ten dollars.</p>
+
+      <p class="reveal">He did not know it yet, but he had just found the world’s “off” switch. That web address was a secret kill switch the attackers had left inside their own weapon. The moment Marcus owned it, WannaCry stopped spreading. A global attack was halted by one tired young man, alone, in a bedroom in Devon.</p>
+
+      <p class="reveal">For a few months, he was a hero. Newspapers called him “the accidental hero.” He flew to Las Vegas for a famous security conference and spent the week among people who admired his work.</p>
+
+      <p class="reveal">Then, at the airport, on his way home, the story turned.</p>
+
+      <p class="pull reveal">The same skill can build a wall or break one. The hand decides — not the talent.</p>
+
+      <p class="reveal">Federal agents arrested him. Not for WannaCry — for something older. Years earlier, before his <span class="gold" data-w="epiphany" data-d="A sudden moment of clear understanding that changes how you see things — and often, who you decide to be." data-ex="She had an epiphany and finally knew what she wanted to do with her life.">epiphany</span>, before he chose to use his skills to protect people, a younger Marcus had written harmful software himself. He had been a teenager then — clever, reckless — selling code that helped criminals steal from bank accounts. He had walked away from that life quietly. But the past does not vanish simply because we stop looking at it.</p>
+      <div class="def" id="def-epiphany"></div>
+
+      <p class="reveal">This was his <span class="gold" data-w="reckoning" data-d="A moment when you must finally face the results and consequences of your past actions." data-ex="After years of ignoring the debt, the reckoning finally arrived.">reckoning</span>. The hero of May was now a defendant, facing years in prison for who he had been at sixteen.</p>
+      <div class="def" id="def-reckoning"></div>
+
+      <p class="reveal">Marcus did not run from it. He pleaded guilty. He chose to <span class="gold" data-w="disavow" data-d="To say clearly and openly that you no longer support or accept something you once did or believed." data-ex="He disavowed his old opinions and took responsibility for the harm they caused.">disavow</span> the boy who had built those tools — not by pretending that boy never existed, but by owning him completely. “Having grown up,” he said, “I’ve been using the same skills I once misused — for good.”</p>
+      <div class="def" id="def-disavow"></div>
+
+      <p class="reveal">When the judge finally spoke, he did something unusual. He looked at the whole person, not only the crime. He weighed the harm of the past against the good of the present — a young man who, expecting no reward, had stepped forward and protected millions of strangers. The judge sentenced him to the time he had already served. No prison. “You turned a corner,” he said.</p>
+
+      <p class="reveal">That is the true meaning of <span class="gold" data-w="redemption" data-d="Earning back respect and goodness after doing wrong — not by erasing your history, but by outgrowing it." data-ex="His years of honest work became his redemption.">redemption</span>: not erasing your history, but outgrowing it so completely that even your past has to admit you have changed.</p>
+      <div class="def" id="def-redemption"></div>
+
+      <p class="reveal">There are two lessons inside this story, and they belong to you, not only to Marcus.</p>
+
+      <p class="reveal">The first: greatness rarely arrives in costume. It usually looks like ordinary, careful work done when no one is watching. Marcus did not save the world in a dramatic battle. He saved it by reading carefully and noticing one small detail. Your skill, your reputation, your future — they are built in those quiet, unwatched hours, long before your defining moment ever arrives.</p>
+
+      <p class="reveal">The second: you are not your worst decision. But you do not escape it by hiding. You escape it by becoming someone whose life is so full of good work that the old version cannot survive the comparison. The past always sends its bill. You pay it with who you choose to become next.</p>
+
+      <p class="reveal">Marcus was twenty-two, with a complicated history and a single good instinct. That was enough to change everything.</p>
+
+      <p class="reveal">So is yours.</p>
+
+      <p class="close-mark reveal">Class is always in session. ✦</p>
+    </article>
+
+    <div class="series-nav">
+      <a href="https://verbamind1.netlify.app/lessons/kevin-mitnick">← Part I · The Most Wanted Hacker</a>
+      <a href="https://verbamind1.netlify.app/#lessons">All lessons →</a>
+    </div>
+  </div>
+
+  <footer>
+    <div class="fbrand">Verba <span style="font-style:italic;color:var(--gold);">Mind</span></div>
+    <div><a href="https://instagram.com/verba_mind">Instagram · @verba_mind</a></div>
+    <p>© 2026 Verba Mind. Life lessons in English · Made with patience in Tashkent</p>
+  </footer>
+
+  <div class="journal"><span class="star">✦</span> Word journal <span id="count">0</span></div>
+  <div class="toast" id="toast">✦ Saved to your word journal</div>
+
+<script>
+  // Reveal on scroll
+  const io = new IntersectionObserver((entries)=>{
+    entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
+  },{threshold:0.12});
+  document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+
+  // Gold words: tap to reveal definition + collect
+  const collected = new Set();
+  const countEl = document.getElementById('count');
+  const toast = document.getElementById('toast');
+  let toastTimer;
+
+  document.querySelectorAll('.gold').forEach(word=>{
+    word.addEventListener('click',()=>{
+      const key = word.dataset.w;
+      const box = document.getElementById('def-'+key);
+      if(box){
+        if(box.classList.contains('open')){
+          box.classList.remove('open'); box.innerHTML='';
+        }else{
+          box.innerHTML = '<span class="w">'+key+'</span> — '+word.dataset.d+
+                          '<span class="ex">e.g. '+word.dataset.ex+'</span>';
+          box.classList.add('open');
+        }
+      }
+      if(!collected.has(key)){
+        collected.add(key);
+        countEl.textContent = collected.size;
+        clearTimeout(toastTimer);
+        toast.classList.add('show');
+        toastTimer = setTimeout(()=>toast.classList.remove('show'),1600);
+      }
+    });
+  });
+</script>
+</body>
+</html>
